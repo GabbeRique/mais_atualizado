@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cardápio</title>
+    <link rel="stylesheet" href="estilo.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        nav li {
+            margin-right: 20px;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        main {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
+
+        section {
+            background-color: #f7f7f7;
+            padding: 50px;
+            border: 1px solid #ddd;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+            clear: both;
+        }
+
+        .itens a:hover {
+            color: indianred;
+            font-size: larger;
+        }
+        .cardapio {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .item {
+            width: 400px;
+            margin: 20px;
+            padding: 20px;
+            border: 1px solid #ddd;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        a {
+            text-decoration: none;
+            color: black;
+        }
+
+        .itens a:hover {
+            transition-duration: 0.5s;
+            color: indianred;
+            font-size: larger;
+        }
+        .bum:hover{
+            transition-duration: 0.5s;
+            font-size: 17px;
+        }
+        .btres:hover{
+            transition-duration: 0.5s;
+            font-size: 11px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="itens">
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/sobre_nos">Sobre Nós</a></li>
+                    <li><a href="/cardapio">Cardápio</a></li>
+                    <li><a href="/promocoes">Promoções</a></li>
+                    <li><a href="/fale_conosco">Fale Conosco</a></li>
+                    <li><a href="/eventos">Eventos</a></li>
+                    <li><a href="/localizacao">Localização</a></li>
+                    <li><a href="/testemunhos">Testemunhos</a></li>
+                    <li><a href="/contato">Contato</a></li>
+                    <li><a href="/galeria">Galeria</a></li>
+
+
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h1>Café Cubano</h1>
+            <div class="cardapio">
+                
+
+                <div class="item">
+                    <button onclick="aumentarTexto()" class="bum">Aumentar Texto</button>
+                    <button onclick="TamanhoNormalTexto()" class="bdois">Texto Normal</button>
+                    <button onclick="diminuirTexto()" class="btres">Diminuir Texto</button>
+                    <h2>Café Cubano</h2>
+                    <ul>
+                        <li class="t"><strong>Ingredientes:</strong>
+                            <ul><br>
+                                <li class="t">1 xícara de espresso</li><br>
+                                <li class="t">Açúcar (a gosto)</li><br>
+                                <li class="t">Leite (leite integral ou meio a meio)</li><br>
+                            </ul>
+                        </li>
+                        <li class="t"><strong>Instruções:</strong>
+                            <ol><br>
+                                <li class="t">Faça o Espresso: Faça um xícara de espresso usando uma cafeteira de espresso no
+                                    fogão ou uma máquina de espresso automática.</li><br>
+                                <li class="t">Adicione Açúcar: Adicione açúcar a gosto ao xícara de espresso.</li><br>
+                                <li class="t">Adicione Leite: Adicione um pouco de leite ao xícara de espresso.</li><br>
+                                <li class="t">Misture Bem: Misture o espresso, açúcar e leite bem para combinar.</li><br>
+                                <li class="t">Sirva: Sirva o Café Cubano em uma xícara pequena e aproveite!</li><br>
+                            </ol>
+                        </li>
+                    </ul>
+
+                </div>
+
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>2024 Afetto</p>
+    </footer>
+    <script>
+        function aumentarTexto() {
+            var texto = document.querySelectorAll('.t')
+            texto.forEach((item)=>{
+                item.style.fontSize = '20px'
+            })
+        }
+        function diminuirTexto() {
+            var texto = document.querySelectorAll('.t')
+            texto.forEach((item)=>{
+                item.style.fontSize = '13px'
+            })
+        }
+        function TamanhoNormalTexto() {
+            var texto = document.querySelectorAll('.t')
+            texto.forEach((item)=>{
+                item.style.fontSize = '16px'
+            })
+        }
+    </script>
+</body>
+
+</html>
